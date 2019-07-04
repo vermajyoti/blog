@@ -12,6 +12,7 @@
   
   p {
     line-height: 1.5;
+    margin: 30px 0;
   }
   
   p a {
@@ -121,14 +122,14 @@
     }
     #mainNav .navbar-brand {
       padding: 10px 20px;
-      color: #fff;
+      color: rgba(255, 255, 255);
     }
     #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255);
     }
     #mainNav .navbar-nav > li.nav-item > a {
       padding: 10px 20px;
-      color: rgb(24, 23, 23);
+      color: rgb(236, 236, 236);
     }
     #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
       color: rgba(255, 255, 255, 0.8);
@@ -176,27 +177,26 @@
   
   header.masthead {
     height: 100%;
-    width: 100%;
-
     background: no-repeat center center;
-    background-image: url("/img/home-bg.jpg");
     background-attachment: scroll;
     position: relative;
     background-size: cover;
   }
   
+
   header.masthead .page-heading,
   header.masthead .post-heading,
   header.masthead .site-heading {
     padding: 200px 0 150px;
-    color: rgba(8, 8, 8, 0.637);
+    color: rgba(70, 70, 70);
+    
   }
   
   @media only screen and (min-width: 768px) {
     header.masthead .page-heading,
     header.masthead .post-heading,
     header.masthead .site-heading {
-      padding: 80px 0;
+      padding: 200px 0;
     }
   }
   
@@ -214,7 +214,7 @@
   header.masthead .page-heading .subheading,
   header.masthead .site-heading .subheading {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.1;
     display: block;
     margin: 10px 0 0;
@@ -246,14 +246,14 @@
   }
   
   header.masthead .post-heading .meta {
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 25px;
+    font-weight: 800;
     font-style: italic;
     font-family: 'Lora', 'Times New Roman', serif;
   }
   
   header.masthead .post-heading .meta a {
-    color: #fff;
+    color: rgb(211, 13, 13);
   }
   
   @media only screen and (min-width: 768px) {
@@ -347,8 +347,6 @@
     margin: 0;
     -webkit-transition: top 0.3s ease, opacity 0.3s ease;
     transition: top 0.3s ease, opacity 0.3s ease;
-    vertical-align: middle;
-    vertical-align: baseline;
     opacity: 0;
   }
   

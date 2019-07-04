@@ -2,25 +2,18 @@
  
 @section('content')
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('img/home.jpg')">
+<header class="masthead" style="background-image: url('img/index.jpg')">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
-          <h1>JYOTI VERMA</h1>
-          <span class="subheading">Hello Jyoti Here</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
- 
-<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-      @each(post in posts)
+          <h1>Jyoti Blogs</h1>
+          
+           <div align="left">
+           <br>
+           <br>
+           @each(post in posts)
         <div class="post-preview">
           <a href="/post/{{ post._id }}">
             <h2 class="post-title">
@@ -34,13 +27,14 @@
         </div>
         <hr>
       @endeach
-      <!-- Pager -->
-      <div class="clearfix">
-        <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+      <div>
+      <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</header>
  
-<hr>
+<!-- Main Content -->
+ 
 @endsection
