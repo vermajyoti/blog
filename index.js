@@ -23,9 +23,12 @@ const redirectIfAuthenticated = require('./middleware/redirectIfAuthenticated');
 const app = new express();
 app.use(connectFlash());
 
-mongoose.connect('mongodb://localhost:27017/node-blog', { useNewUrlParser: true })
-    .then(() => 'You are now connected to Mongo!')
-    .catch(err => console.error('Something went wrong', err))
+mongoose.connect('mongodb+srv://jyoti123:asd123@tmcluster-l0yje.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
+
+mongoose.connection.on('connected', (err)=> {
+  console.log("MongoDB is connected to Mongo Atlas");
+  console.log("this is error", err);
+})
  
     const mongoStore = connectMongo(expressSession);
  
@@ -61,7 +64,7 @@ app.get("/auth/login", redirectIfAuthenticated, loginController);
 app.post("/users/login", redirectIfAuthenticated, loginUserController);
 app.get("/auth/register", redirectIfAuthenticated, createUserController);
 app.post("/users/register", redirectIfAuthenticated, storeUserController);
-
-app.listen(8080, () => {
-  console.log("App listening on port 8080");
+var  PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log("App listening on port");
 });
